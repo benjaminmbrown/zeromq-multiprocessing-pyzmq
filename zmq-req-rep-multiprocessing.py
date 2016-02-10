@@ -12,7 +12,7 @@ def server(port="5556"):
 	while True:
 		message = socket.recv()
 		print "Got request  %s" % message
-		socket.send("We got your request!")
+		socket.send("We got your request on %s" % port)
 
 def client(ports=["5556"]):
 	context = zmq.Context()
